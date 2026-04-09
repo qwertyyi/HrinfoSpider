@@ -85,6 +85,16 @@ class HrinfoDownloaderMiddleware:
         # - or return a Request object
         # - or raise IgnoreRequest: process_exception() methods of
         #   installed downloader middleware will be called
+        cookies = {
+            "NTES_YD_SESS": "zfe3KsNlQcv2wdaK7x1DxAlba.ua.m0hC43laGBc88yOsHBnse9N0vz1h8v9K7IZj_.mW9IzlTks5RZWappP4K4LHJ3TGCSv2wnf0vtDkhaPp8tQnLOPvqvkDgkwSgOsfWh.dvyb3pZpvJaGwGKL_J4z1ldF3mmFnyR1bbS98Vrl5xKsXE7UA3CdW.Wah3V3HuDNeWeJa_fjX.G1eMtW0P6lUUjmnDwBahr5TGbJie9V2",
+            "S_INFO": "1775722237|0|0&60##|19962913272",
+            "P_INFO": "19962913272|1775722237|0|rms|00&99|null&null&null#jis&320100#10#0#0|&0|null|19962913272",
+            "authUrsToken": "auth:urs:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJFSFJfSVNTVUVSIiwiZXhwIjoxNzc1ODA4NjM3LCJpYXQiOjE3NzU3MjIyMzcsInVzZXJuYW1lIjoiMTk5NjI5MTMyNzIsMiJ9.JffhTWrnfsCr7uzm8UpehikHgjJuAka9ffcC2oIDR4I",
+            "JSESSIONID": "57BBEBFC273528C1E118652789FDA80D",
+            "userName": "19962913272",
+            "accountType": "2",
+        }
+        request.cookies = cookies
         user_agent = random.choice(self.USER_AGENT_LIST)
         request.headers["User-Agent"] = user_agent
 
